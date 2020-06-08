@@ -1,0 +1,5 @@
+select t1.id, t1.SomeNumt, SUM(t2.SomeNumt) as sum
+from TT t1, TT t2
+where t1.id >= t2.id and t2.id > t1.id-5
+group by t1.id, t1.SomeNumt
+order by t1.id
